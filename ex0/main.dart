@@ -1,0 +1,18 @@
+import "dart:io";
+
+void main() {
+  double n1 = validaNota('primeira nota: ');
+  double n2 = validaNota('segunda nota: ');
+  double n3 = validaNota('terceira nota: ');
+  double media = (n1 + n2 + n3) / 3;
+  print('Sua média é: $media');
+}
+
+double validaNota(String nomeNota) {
+  stdout.writeln('Infome a $nomeNota');
+  String? entrada = stdin.readLineSync();
+  if (entrada != null) {
+    double nota = double.parse(entrada);
+    return nota;
+  }
+}
