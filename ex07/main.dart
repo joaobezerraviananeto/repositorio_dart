@@ -1,6 +1,4 @@
 import 'dart:io';
-
-
 void main() {
   double n1 = lerNota('primeira nota');
   double n2 = lerNota('segunda nota');
@@ -10,7 +8,7 @@ void main() {
   print('Média: $media');
 }
 
-}
+
 
 
 double lerNota(String nomeNota) {

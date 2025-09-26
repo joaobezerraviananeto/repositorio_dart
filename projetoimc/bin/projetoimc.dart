@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 void main() {
   double peso = lerNumero('Informe seu peso:');
   double altura = lerNumero('Informe sua altura:');
