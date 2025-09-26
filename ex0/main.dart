@@ -9,12 +9,20 @@ void main() {
 }
 
 double validaNota(String nomeNota) {
-  stdout.writeln('Infome a $nomeNota');
-  String? entrada = stdin.readLineSync();
-  if (entrada != null) {
-    double nota = double.parse(entrada);
-    return nota;
-  } else {
-    print('Informe apenas numeros! Você digitou $entrada');
+  for (int i = 0; i < 3; i++) {
+    stdout.writeln('Infome a $nomeNota');
+    String? entrada = stdin.readLineSync();
+    if (entrada != null) {
+      try {
+        double nota = double.parse(entrada);
+        return nota;
+      } catch (e) {
+        print('Informe apenas numeros');
+      }
+    } else {
+      print('Informe apenas numeros! Você digitou $entrada');
+      i++;
+    }
   }
+  throw Exception('Entrada invalida');
 }
