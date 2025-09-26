@@ -14,5 +14,7 @@ double validaNota(String nomeNota) {
   if (entrada != null) {
     double nota = double.parse(entrada);
     return nota;
+  } else {
+    print('Informe apenas numeros! Você digitou $entrada');
   }
 }
